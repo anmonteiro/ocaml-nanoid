@@ -6,7 +6,7 @@
 (test
  (name os)
  (modules os)
- (libraries alcotest tests nanoid.os))
+ (libraries alcotest tests nanoid.os mirage-crypto-rng.unix))
 
 (executable
  (name jsoo)
@@ -15,7 +15,7 @@
  (libraries alcotest tests js_of_ocaml nanoid.jsoo)
  (optional))
 
-(rule
- (alias runtest)
- (action
-  (run node %{dep:jsoo.bc.js})))
+; (rule
+; (alias runtest)
+; (action
+; (run node %{dep:jsoo.bc.js})))

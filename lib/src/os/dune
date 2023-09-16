@@ -2,11 +2,11 @@
  (name nanoid_os)
  (public_name nanoid.nanoid_os)
  (modules nanoid_os versions)
- (libraries cryptokit))
+ (libraries mirage-crypto-rng))
 
 (library
  (name nanoid_os_impl)
  (public_name nanoid.os)
  (modules nanoid)
  (implements nanoid)
- (libraries cryptokit nanoid_os))
+ (libraries mirage-crypto-rng nanoid_os))
